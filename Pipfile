@@ -8,6 +8,8 @@ requests = "*"
 flask-restplus = "*"
 python-dotenv = "*"
 flask-migrate = "*"
+flask-sqlalchemy = "*"
+"flask-psycopg2" = "*"
 
 [dev-packages]
 

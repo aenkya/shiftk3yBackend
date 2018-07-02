@@ -24,7 +24,7 @@ class Development(Config):
     """ Model for Development Environment Config Object """
     DEBUG = True
     DEVELOPMENT = True
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE')
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
     SQLALCHEMY_TRACK_MODIFICATIONS = True
 
 class Testing(Config):

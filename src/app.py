@@ -3,6 +3,7 @@
 from flask import Flask, jsonify
 from flask_restplus import Api
 
+from api.models.BaseModel import db
 try:
     from .config import Configuration
 except ImportError:
@@ -21,6 +22,7 @@ def create_app(environment="Development"):
     """
     app = Flask(__name__)
     app.config.from_object(configuration[environment])
+    db.init_app(app)
 
     api = Api(
         app = app,
